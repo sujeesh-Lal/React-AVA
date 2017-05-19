@@ -1,0 +1,78 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-header {
+  background-color: #00bcd5;
+  padding: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.App-header h2 {
+  width: 400px;
+}
+
+.App-intro {
+  font-size: large;
+  display: flex;
+  justify-content: center;
+}
+
+.App-intro ul {
+  list-style: none;
+  width: 400px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.App-intro li {
+  padding: 10px;
+  text-align: left;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ececec;
+  color: #000;
+  display: flex;
+}
+
+.App-intro .loading {
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+  display: flex;
+  border: none;
+  justify-content: center;
+}
+
+.App-intro li .avatar {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  background-color: #00bcd5;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+li:hover {
+  background-color: #2387dc;
+  color: #fff;
+}
+
+loading:hover {
+  background-color: transparent;
+  color: #000;
+}
+
+.App-intro li .name {
+  display: flex;
+  align-items: center;
+}
