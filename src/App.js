@@ -36,28 +36,38 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <h2>{this.state.header}</h2>
-        </div>
-        <div className="App-intro">
-          <ul>
-            {
-              this.state.repository.length > 0 ? undefined : <li className="loading">Loading...</li>
-            }
-            {this.state.repository.map(
-              (item, i) => {
-                return <li key={i} className="item" onClick={this.selectItem.bind(this, item)}>
-                  <div className="avatar">{item.name.substr(0, 1)}</div>
-                  <div className="name">{item.name}</div>
-                </li>
-              }
-            )}
-          </ul>
-        </div>
-      </div>
+    var _this2 = this;
+    var profile = React.createElement("div", { className: "App" },
+      React.createElement("div", { className: "App-header" },
+        React.createElement("h2", { className: "App-intro" }, this.state.header)
+      ),
+      React.createElement("div", { className: "App-intro" },
+        React.createElement("ul", null,
+          this.state.repository.length > 0 ? undefined : React.createElement(
+            'li',
+            { className: 'loading' },
+            'Loading...'
+          ),
+          this.state.repository.map(function (item, i) {
+            return React.createElement(
+              'li',
+              { key: i, className: 'item', onClick: _this2.selectItem.bind(_this2, item) },
+              React.createElement(
+                'div',
+                { className: 'avatar' },
+                item.name.substr(0, 1)
+              ),
+              React.createElement(
+                'div',
+                { className: 'name' },
+                item.name
+              )
+            );
+          })
+        )
+      )
     );
+    return profile
   }
 }
 
